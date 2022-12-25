@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="shortcut icon" href="./images/security.png" type="image/x-icon">
+    <link rel="stylesheet" href="./fonts/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="password-data">
+            <div class="title">Password Generator</div>
+            <div class="password-content">
+                <div class="main-password">
+                    <input type="text" name="password-input" id="main-password-input">
+                </div>
+                <div class="copy-button" data-tooltip="copy password">
+                    <i class="fa-solid fa-copy"></i>
+                </div>
+            </div>
+        </div>
+        <div class="generation-data">
+            <div class="char-length">
+                <div class="length-data">
+                    <p>Character Length</p>
+                    <p id="char-length-value">10</p>
+                </div>
+                <input type="range" value="10" min="8" max="30" name="range-silder" id="char-range-slider">
+            </div>
+            <div class="char-filters">
+                <div class="uppercase-filter filter-box">
+                    <input type="checkbox" name="password-checkbox" id="uppercase-check" checked="true" disabled="true">
+                    <p id="uppercase-data">Include Uppercase Letters</p>
+                </div>
+                <div class="lowercase-filter filter-box">
+                    <input type="checkbox" name="password-checkbox" id="lowercase-check">
+                    <p id="lowercase-data">Include Lowercase Letters</p>
+                </div>
+                <div class="numbers-filter filter-box">
+                    <input type="checkbox" name="password-checkbox" id="number-check">
+                    <p id="numbers-data">Include Numbers</p>
+                </div>
+                <div class="symbols-filter filter-box">
+                    <input type="checkbox" name="password-checkbox" id="symbol-check">
+                    <p id="symbols-data">Include Symbols</p>
+                </div>
+            </div>
+            <div class="char-strength">
+                <p>Strength</p>
+                <p id="strength-update">poor</p>
+                <div class="bars-container">
+                    <span class="bars str-1 active-bars"></span>
+                    <span class="bars str-2"></span>
+                    <span class="bars str-3"></span>
+                    <span class="bars str-4"></span>
+                </div>
+            </div>
+            <div class="char-generate">
+                <p>Generate</p>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
